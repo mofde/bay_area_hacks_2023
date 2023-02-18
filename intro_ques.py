@@ -16,3 +16,4 @@ elif i=e:
     extrovert()
 else:
     #prompt to answer correctly
+    prompt()
