@@ -15,8 +15,13 @@ elif i=="e":
     extrovert()
 else:
     #prompt to answer correctly
-<<<<<<< HEAD
-    
-=======
     prompt()
->>>>>>> 5b99708899c662ec5f055dadb6d5798417f507b9
+
+def prompt():
+    i = input("Invalid input! How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert")
+    if i=="i":
+        introvert()
+    elif i=="a":
+        ambivert()
+    elif i=="e":
+        extrovert()
