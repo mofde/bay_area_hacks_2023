@@ -26,3 +26,12 @@ def prompt():
         ambivert()
     elif i=="e":
         extrovert()
+
+def introvert():
+    #placeholder
+
+def ambivert():
+    #placeholder
+
+def extrovert():
+    #placeholder
