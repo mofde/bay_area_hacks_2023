@@ -7,7 +7,7 @@ i = 0
 input "How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert"
 
 #the grouping
-#make all categories as functions to be used later
+#make all categories as functions to be used later, these need to store the data of people
 if i=i:
     introvert()
 elif i=a:
