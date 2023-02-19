@@ -10,6 +10,7 @@ print: recv_msg
 
 #send user details to server
 send_msg = input("Enter your user name(prefix with #):")
+send_msg = str.encode(send_msg)
 client_socket.send(send_msg)
 
 
