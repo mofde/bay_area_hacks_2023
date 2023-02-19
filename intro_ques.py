@@ -95,3 +95,6 @@ def findMovie(movie):
         return "comedy"
     elif movie == "d":
         return "drama"
+
+def groups():
+    
