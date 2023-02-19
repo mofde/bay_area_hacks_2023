@@ -1,9 +1,6 @@
 #the survey questions
 
-#variable
-
-#ask input
-
+#define classes
 class introvert(object):
     #constructor
     def _init_(self):
@@ -31,12 +28,12 @@ class extrovert(object):
         self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
         self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))
 
-
+#identify personality type
 def ask():
     i = input("How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert")
 
     #the grouping
-    #make all categories as functions to be used later, these need to store the data of people
+    #sort people into classes
     if i=="i":
         newPerson = introvert()
     elif i=="a":
@@ -47,6 +44,7 @@ def ask():
         #prompt to answer correctly
         prompt()
 
+#correct for user error
 def prompt():
     i = input("Invalid input! How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert")
     if i=="i":
@@ -56,6 +54,7 @@ def prompt():
     elif i=="e":
          newPerson = extrovert()
 
+#sort answers to questions
 def findDescription(description):
     description = description.lower()
     if description == "c":
@@ -76,7 +75,7 @@ def findHobby(hobby):
     elif hobby == "s":
         return "sports"
     elif hobby == "t":
-        return technology
+        return "technology"
 
 def findLandscape(landscape):
     landscape = landscape.lower()
