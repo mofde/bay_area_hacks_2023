@@ -9,9 +9,6 @@ class introvert(object):
         self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
         self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))
 
-
-    
-
 class ambivert(object):
     #constructor
     def _init_(self):
