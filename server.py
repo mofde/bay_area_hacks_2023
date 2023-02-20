@@ -1,3 +1,4 @@
+from login import usernameInput
 import socket
 import threading
 import datetime
@@ -39,7 +40,7 @@ print(f'Server is listening on {SERVER_ADDRESS}')
 while True:
     # accept a client connection
     client_socket, client_address = server_socket.accept()
-    print(f'New client connected: {client_address}')
+    print(f'New client connected: {usernameInput}')
     # add the client socket and address to the list of clients
     clients.append((client_socket, client_address))
     # start a new thread to handle the client connection
