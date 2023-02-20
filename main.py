@@ -29,10 +29,3 @@ saveList.append(newPerson._movie)
 choiceList.remove(newPerson.type)
 strChoiceList = str(choiceList)
 friendUser = readObj(saveList, strChoiceList)
-
-
-
-
-
-
-
