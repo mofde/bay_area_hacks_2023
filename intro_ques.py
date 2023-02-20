@@ -106,4 +106,4 @@ while True:
     if startQuestions == True:
         ask()
     else:
-        print("didnt work :(")
+        continue
