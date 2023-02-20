@@ -1,6 +1,9 @@
 import maskpass
 import csv
 from csv import writer
+
+startQuestions = False
+
 def login() -> int:
     login = 0
     while login == 0:
