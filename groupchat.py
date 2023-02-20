@@ -6,10 +6,9 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 #host and port
-host = 'localhost'  #host?
-port = 8000  #port?
+port = 12345
 
-server_socket.bind((host, port))
+client_socket.connect(('127.0.0.1',port))
 
 server_socket.listen()
 
