@@ -6,8 +6,8 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 #host and port
-host = 'localhost'  # Replace with your own host
-port = 8000  # Replace with your own port
+host = 'localhost'  #host?
+port = 8000  #port?
 
 server_socket.bind((host, port))
 
