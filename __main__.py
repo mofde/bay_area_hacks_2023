@@ -1,4 +1,10 @@
-from __init__ import *
+import maskpass
+import csv
+from csv import writer
+
+from login import startQuestions, login, createNewAccount
+from intro_ques import introvert, extrovert, ask, prompt, findDescription, findHobby, findLandscape, findMovie
+from save_objects import saveObj, readObj
 import socket
 
 loggedIn = False
@@ -6,11 +12,11 @@ loggedIn = False
 if __name__ == "__main__":
     accountInput = input("Do you currently have an account? ")
     if accountInput.lower() == "yes":
-        if login() == 1:
-            loggedIn = True
+        usernameInput = login()
+        loggedIn = True
     else:
-        if createNewAccount() == 1:
-            loggedIn = True
+        usernameInput = createNewAccount()
+        loggedIn = True
 
 if loggedIn == True:
     if ask() == "i":

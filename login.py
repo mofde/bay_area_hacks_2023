@@ -4,7 +4,7 @@ from csv import writer
 
 startQuestions = False
 
-def login() -> int:
+def login() -> str:
     login = 0
     while login == 0:
         usernameInput = input("Username: ")
@@ -13,10 +13,10 @@ def login() -> int:
             csv_reader = csv.DictReader(csv_file)
             for row in csv_reader:
                 if usernameInput == row["Username"] and passwordInput == row["Password"]:
-                    return 1
+                    return usernameInput
             print("Username or password is incorrect")
 
-def createNewAccount() -> int:
+def createNewAccount() -> str:
     newAccountCreated = 0
     while newAccountCreated == 0:
         usernameInput = input("Username: ")
@@ -28,4 +28,4 @@ def createNewAccount() -> int:
         writer_object = writer(csv_file)
         writer_object.writerow([usernameInput, passwordInput])
         csv_file.close()
-    return 1
+    return usernameInput
