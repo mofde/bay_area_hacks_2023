@@ -7,10 +7,10 @@ if __name__ == "__main__":
     accountInput = input("Do you currently have an account? ")
     if accountInput.lower() == "yes":
         if login() == 1:
-            loggedIn == True
+            loggedIn = True
     else:
         if createNewAccount() == 1:
-            loggedIn == True
+            loggedIn = True
 
 if loggedIn == True:
     if ask() == "i":
