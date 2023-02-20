@@ -106,8 +106,8 @@ def findMovie(movie):
     elif movie == "d":
         return "drama"
 
-while True:
+"""while True:
     if startQuestions == True:
         ask()
     else:
-        continue
+        continue"""
