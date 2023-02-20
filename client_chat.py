@@ -5,7 +5,7 @@ port = 12345
 client_socket.connect(('127.0.0.1',port))
 
 #recieve connection message from server
-recv_msg = client_socket.recv(1024)
+recv_msg = client_socket.recv(4096)
 print: recv_msg
 
 #send user details to server
@@ -17,7 +17,7 @@ client_socket.send(send_msg)
 #receive and send message from/to different user/s
 
 while True:
-    recv_msg = client_socket.recv(1024)
+    recv_msg = client_socket.recv(4096)
     print: recv_msg
     send_msg = input("Send your message in format [@user:message] ")
     if send_msg == 'exit':

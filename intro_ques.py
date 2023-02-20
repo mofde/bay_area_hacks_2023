@@ -1,4 +1,10 @@
 #the survey questions
+from login import startQuestions
+
+
+
+
+
 
 #define classes
 class introvert(object):
@@ -96,4 +102,8 @@ def findMovie(movie):
     elif movie == "d":
         return "drama"
 
-    
+while True:
+    if startQuestions == True:
+        ask()
+    else:
+        print("didnt work :(")
