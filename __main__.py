@@ -5,7 +5,7 @@ from csv import writer
 from login import startQuestions, login, createNewAccount
 from intro_ques import introvert, extrovert, ask, prompt, findDescription, findHobby, findLandscape, findMovie
 from save_objects import saveObj, readObj
-import server
+import subprocess
 import socket
 
 loggedIn = False
@@ -27,7 +27,7 @@ if loggedIn == True:
     saveObj(newPerson)
 
 if loggedIn == True:
-    server.main()
+    subprocess.run(['python', 'server.py'])
 
 saveList = []
 choiceList = ["introvert", "extrovert"]
