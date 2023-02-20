@@ -10,10 +10,10 @@ from login import startQuestions
 class introvert:
     #constructor
     def __init__(self, username):
-        self._description = findDescription(input("How would you describe yourself? (c)Creative (s)Smart (e)Easygoing (i)Insightful"))
-        self._hobby = findHobby(input("What do you prefer to do in your spare time? (v)Video games (c)Creative activities (s)Sports (t)Technology"))
-        self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
-        self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))
+        self._description = findDescription(input("How would you describe yourself? (c)Creative (s)Smart (e)Easygoing (i)Insightful\n"))
+        self._hobby = findHobby(input("What do you prefer to do in your spare time? (v)Video games (c)Creative activities (s)Sports (t)Technology\n"))
+        self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains\n"))
+        self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama\n"))
         self.username = username
         self.type = "introvert"
 
@@ -28,16 +28,16 @@ class introvert:
 class extrovert:
     #constructor
     def __init__(self, username):
-        self._description = findDescription(input("How would you describe yourself? (c)Creative (s)Smart (e)Easygoing (i)Insightful"))
-        self._hobby = findHobby(input("What do you prefer to do in your spare time? (v)Video games (c)Creative activities (s)Sports (t)Technology"))
-        self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
-        self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))
+        self._description = findDescription(input("How would you describe yourself? (c)Creative (s)Smart (e)Easygoing (i)Insightful\n"))
+        self._hobby = findHobby(input("What do you prefer to do in your spare time? (v)Video games (c)Creative activities (s)Sports (t)Technology\n"))
+        self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains\n"))
+        self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama\n"))
         self.username = username
         self.type = "extrovert"
 
 #identify personality type
 def ask():
-    i = input("How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert")
+    i = input("How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert\n")
 
     #the grouping
     #sort people into classes
@@ -53,7 +53,7 @@ def ask():
 
 #correct for user error
 def prompt():
-    i = input("Invalid input! How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert")
+    i = input("Invalid input! How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert\n")
     if i=="i":
         return "i"
         """( detab )elif i=="a":
