@@ -7,13 +7,14 @@ from login import startQuestions
 
 
 #define classes
-class introvert(object):
+class introvert:
     #constructor
-    def __init__(self):
+    def __init__(self, username):
         self._description = findDescription(input("How would you describe yourself? (c)Creative (s)Smart (e)Easygoing (i)Insightful"))
         self._hobby = findHobby(input("What do you prefer to do in your spare time? (v)Video games (c)Creative activities (s)Sports (t)Technology"))
         self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
         self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))
+        self.username = username
 
 """class ambivert(object):
     #constructor
@@ -23,13 +24,14 @@ class introvert(object):
         self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
         self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))"""
     
-class extrovert(object):
+class extrovert:
     #constructor
-    def __init__(self):
+    def __init__(self, username):
         self._description = findDescription(input("How would you describe yourself? (c)Creative (s)Smart (e)Easygoing (i)Insightful"))
         self._hobby = findHobby(input("What do you prefer to do in your spare time? (v)Video games (c)Creative activities (s)Sports (t)Technology"))
         self._landscape = findLandscape(input("What kind of landscape do you prefer? (f)Forest (c)City (o)Ocean (m)Mountains"))
         self._movie = findMovie(input("What kinds of movie do you prefer? (a)Action (r)Romance (c)Comedy (d)Drama"))
+        self.username = username
 
 #identify personality type
 def ask():
@@ -38,11 +40,11 @@ def ask():
     #the grouping
     #sort people into classes
     if i=="i":
-        newPerson = introvert()
+        return "i"
         """( detab )elif i=="a":
         newPerson = ambivert()"""
     elif i=="e":
-        newPerson = extrovert()
+        return "e"
     else:
         #prompt to answer correctly
         prompt()
@@ -51,11 +53,11 @@ def ask():
 def prompt():
     i = input("Invalid input! How would you describe yourself?     (i)Introvert    (a)Ambivert     (e)Extrovert")
     if i=="i":
-        newPerson = introvert()
+        return "i"
         """( detab )elif i=="a":
         newPerson = ambivert()"""
     elif i=="e":
-         newPerson = extrovert()
+         return "e"
 
 #sort answers to questions
 def findDescription(description):

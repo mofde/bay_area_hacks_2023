@@ -13,7 +13,7 @@ def login():
         for row in csv_reader:
             if usernameInput == row["Username"] and passwordInput == row["Password"]:
                 startQuestions = True
-                return
+                return 1
         print("Username or password is incorrect")
 
 def createNewAccount():
@@ -29,6 +29,7 @@ def createNewAccount():
         writer_object.writerow([usernameInput, passwordInput])
         csv_file.close()
         startQuestions = True
+        return 1
 
 if __name__ == "__main__":
     accountInput = input("Do you currently have an account? ")
