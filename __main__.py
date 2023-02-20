@@ -20,9 +20,9 @@ if __name__ == "__main__":
 
 if loggedIn == True:
     if ask() == "i":
-        newPerson = introvert()
+        newPerson = introvert(usernameInput)
     elif ask() == "e":
-        newPerson = extrovert()
+        newPerson = extrovert(usernameInput)
     saveObj(newPerson)
 saveList = []
 choiceList = ["introvert", "extrovert"]
