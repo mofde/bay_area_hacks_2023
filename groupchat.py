@@ -8,7 +8,7 @@ server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 #host and port
 port = 12345
 
-client_socket.connect(('127.0.0.1',port))
+client_socket.connect(('127.0.0.1',port))  #why is their an error about this when there's line 5
 
 server_socket.listen()
 
