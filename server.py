@@ -1,21 +1,25 @@
 import socket
 import threading
+import datetime
 
 # host and port
 SERVER_ADDRESS = ('127.0.0.1', 12345)
 
-# creating a socket object and binding it to the server's address and port
+# create a socket object and bind it to the server's address and port
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(SERVER_ADDRESS)
 
-#function to handle client connections
+# function to handle client connections
 def handle_client(client_socket, client_address):
     while True:
         # receive data from the client
         data = client_socket.recv(1024).decode('utf-8')
         if not data:
             break
-        print(f'{client_address}: {data}')
+        # save the received data to a file
+        with open('chat_history.txt', 'a') as file:
+            timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            file.write(f'{timestamp} {client_address}: {data}\n')
         # send the received data to all connected clients except the sender
         for sock, address in clients:
             if sock != client_socket:
