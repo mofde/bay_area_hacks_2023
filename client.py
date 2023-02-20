@@ -1,14 +1,14 @@
 import socket
 import threading
 
-# specify the server's address and port
+# host and port
 SERVER_ADDRESS = ('127.0.0.1', 12345)
 
-# create a socket object and connect it to the server's address and port
+# creating a socket object and connecting it to the server's host and port
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect(SERVER_ADDRESS)
 
-# define a function to handle incoming messages from the server
+# function to handle incoming messages from the server
 def handle_messages():
     while True:
         # receive data from the server
