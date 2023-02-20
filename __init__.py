@@ -2,6 +2,7 @@ import maskpass
 import csv
 from csv import writer
 import socket
+from client import handle_messages
 
 from login import startQuestions, login, createNewAccount
 from intro_ques import introvert, extrovert, ask, prompt, findDescription, findHobby, findLandscape, findMovie

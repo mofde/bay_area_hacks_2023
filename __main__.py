@@ -5,6 +5,7 @@ from csv import writer
 from login import startQuestions, login, createNewAccount
 from intro_ques import introvert, extrovert, ask, prompt, findDescription, findHobby, findLandscape, findMovie
 from save_objects import saveObj, readObj
+#from server import clients
 import socket
 
 loggedIn = False
@@ -24,6 +25,10 @@ if loggedIn == True:
     elif ask() == "e":
         newPerson = extrovert(usernameInput)
     saveObj(newPerson)
+
+#if loggedIn == True:
+    #call chat
+
 saveList = []
 choiceList = ["introvert", "extrovert"]
 saveList.append(newPerson.username)
