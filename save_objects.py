@@ -8,7 +8,7 @@ def saveObj(type_of_person = "", description = "", hobby = "", landscape = "", m
     writer_object.writerow([username, type_of_person, description, hobby, landscape, movie])
     people.close()
 
-def readObj(description):
+def readObj(description, type):
     # when using this, make sure to have a list of all of the descriptions of the person in the call
     people = open("people.csv", "r")
     compareList = []
@@ -29,13 +29,10 @@ def readObj(description):
                 if cC >= 6:
                     cC = 0
             c = 0
-            if len(returnDict) >= 3:
+            if len(returnDict) >= 3 and compareList[1] == type:
+                #           did it work, username, type of person
                 returnList = [1, compareList[0], compareList[1]]
                 return returnList
-            else:
-                returnList = [0, compareList[0], compareList[1]]
-                return returnList
-
     people.close()
 
 

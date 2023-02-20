@@ -19,14 +19,16 @@ if loggedIn == True:
         newPerson = extrovert()
     saveObj(newPerson)
 saveList = []
+choiceList = ["introvert", "extrovert"]
 saveList.append(newPerson.username)
 saveList.append(newPerson.type)
 saveList.append(newPerson._description)
 saveList.append(newPerson._hobby)
 saveList.append(newPerson._landscape)
 saveList.append(newPerson._movie)
-
-friendUser = readObj(saveList)
+choiceList.remove(newPerson.type)
+strChoiceList = str(choiceList)
+friendUser = readObj(saveList, strChoiceList)
 
 
 
