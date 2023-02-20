@@ -25,7 +25,7 @@ if loggedIn == True:
         newPerson = introvert(usernameInput)
     elif ask() == "e":
         newPerson = extrovert(usernameInput)
-    saveObj(newPerson)
+    saveObj(newPerson.type, newPerson._description, newPerson._hobby, newPerson._landscape, newPerson._movie)
 
 if loggedIn == True:
     subprocess.run(['python', 'server.py'])
