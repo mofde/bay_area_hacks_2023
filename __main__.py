@@ -9,7 +9,6 @@ import subprocess
 import socket
 
 loggedIn = False
-usernameInput = ""
 
 if __name__ == "__main__":
     accountInput = input("Do you currently have an account? ")
@@ -25,7 +24,7 @@ if loggedIn == True:
         newPerson = introvert(usernameInput)
     elif ask() == "e":
         newPerson = extrovert(usernameInput)
-    saveObj(newPerson)
+    saveObj(newPerson.type, newPerson._description, newPerson._hobby, newPerson._landscape, newPerson._movie)
 
 if loggedIn == True:
     subprocess.run(['python', 'server.py'])
