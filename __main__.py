@@ -1,10 +1,4 @@
-import maskpass
-import csv
-from csv import writer
-
-from login import startQuestions, login, createNewAccount
-from intro_ques import introvert, extrovert, ask, prompt, findDescription, findHobby, findLandscape, findMovie
-from save_objects import saveObj, readObj
+from __init__ import *
 import socket
 
 loggedIn = False
